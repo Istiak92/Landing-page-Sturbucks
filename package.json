@@ -1,0 +1,14 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "landing page with sass",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "author": "Istiak Ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
