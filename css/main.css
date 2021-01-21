@@ -26,7 +26,8 @@ p {
 .container {
   width: 85%;
   max-width: 65em;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 15em 0; }
 
 .split {
   display: flex;
@@ -73,7 +74,6 @@ section {
 .hero {
   color: white;
   text-align: center;
-  padding: 15em 0;
   background: #222; }
   @supports (background-blend-mode: multiply) {
     .hero {
@@ -82,6 +82,9 @@ section {
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: center center; } }
+  .hero header .logo {
+    position: relative;
+    max-width: 80px; }
 
 .featured {
   background: #eee; }
@@ -118,13 +121,14 @@ section {
 
 .product {
   background: radial-gradient(var(--clr-inner, #c99e75), var(--clr-outer, #75aec9));
-  padding: 3em 0;
+  padding: 3em;
   border-radius: 16px;
   margin-bottom: 48px;
   text-align: center; }
   .product_title {
-    font-size: 4rem;
-    line-height: 1.1;
+    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+    text-transform: uppercase;
+    line-height: 1;
     color: #fff;
     text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2); }
   .product_image {
@@ -132,9 +136,18 @@ section {
   @media (min-width: 45em) {
     .product {
       text-align: left; }
+      .product_title {
+        margin: 0; }
       .product_image {
         float: right;
-        width: 50%; } }
+        width: 65%;
+        shape-outside: url(../img/shoe-1.png);
+        margin: 0 -5em 0 0; }
+      .product.shoe-two .product_image {
+        float: left;
+        margin: 0 0 0 -5em;
+        shape-margin: 2em;
+        shape-outside: url(../img/shoe-2.png); } }
 
 .hero {
   --clr-accent: #faa700; }
