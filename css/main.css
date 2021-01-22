@@ -27,7 +27,7 @@ p {
   width: 85%;
   max-width: 65em;
   margin: 0 auto;
-  padding: 15em 0; }
+  padding: 12em 0; }
 
 .split {
   display: flex;
@@ -77,14 +77,15 @@ section {
   background: #222; }
   @supports (background-blend-mode: multiply) {
     .hero {
-      background: url(../img/shoe-3.png), radial-gradient(#444, #111);
+      background: url(../img/background-image.jpg), radial-gradient(#444, #111);
       background-blend-mode: multiply;
       background-attachment: fixed;
       background-repeat: no-repeat;
-      background-position: center center; } }
-  .hero header .logo {
-    position: relative;
-    max-width: 80px; }
+      background-position: center center;
+      background-size: cover; } }
+
+.logo {
+  padding: 10px; }
 
 .featured {
   background: #eee; }
@@ -102,7 +103,8 @@ section {
       .featured_items:hover .featured_details, .featured_items:focus .featured_details {
         opacity: 1;
         transition: opacity 250ms linear;
-        text-shadow: 0 0 2em white; }
+        text-shadow: 0 0 2em white;
+        line-height: 1.3; }
     .featured_items::after {
       content: "";
       position: absolute;
@@ -110,7 +112,7 @@ section {
       left: 10%;
       padding: 75% 75% 0 0;
       border-radius: 50%;
-      background: #2193b0;
+      background: #4b8369;
       z-index: -1; }
   .featured_details {
     opacity: 0; }
@@ -120,19 +122,20 @@ section {
       font-size: 2.5rem; }
 
 .product {
-  background: radial-gradient(var(--clr-inner, #c99e75), var(--clr-outer, #75aec9));
+  background: radial-gradient(var(--clr-inner, #d4dbc7), var(--clr-outer, #6ee797));
   padding: 3em;
   border-radius: 16px;
   margin-bottom: 48px;
   text-align: center; }
   .product_title {
-    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+    font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
     text-transform: uppercase;
     line-height: 1;
     color: #fff;
     text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2); }
   .product_image {
-    margin: -5em 0 0 0; }
+    border-radius: 50%;
+    padding: 0 15px; }
   @media (min-width: 45em) {
     .product {
       text-align: left; }
@@ -140,29 +143,24 @@ section {
         margin: 0; }
       .product_image {
         float: right;
-        width: 65%;
-        shape-outside: url(../img/shoe-1.png);
-        margin: 0 -5em 0 0; }
-      .product.shoe-two .product_image {
+        width: 35%;
+        border-radius: 50%;
+        shape-outside: circle();
+        shape-margin: 3em;
+        padding: 0 15px; }
+      .product.coffee-two .product_image {
         float: left;
-        margin: 0 0 0 -5em;
-        shape-margin: 2em;
-        shape-outside: url(../img/shoe-2.png); } }
+        shape-margin: 3em;
+        shape-outside: circle(); } }
 
-.hero {
-  --clr-accent: #faa700; }
-
-.shoe-one {
-  --clr-inner: #faa700;
-  --clr-outer: #e48d00;
-  --clr-accent: #a1173c; }
-
-.shoe-two {
-  --clr-inner: #fce4b3;
-  --clr-outer: #eac886;
-  --clr-accent: #2f4858; }
-
-.shoe-three {
-  --clr-inner: #6dd5ed;
-  --clr-outer: #2193b0;
+.container {
   --clr-accent: #008951; }
+
+.coffee-one {
+  --clr-inner: #ffffffc4;
+  --clr-outer: #4ab66e; }
+
+.coffee-two {
+  --clr-inner: #f3dcab;
+  --clr-outer: #f8c726;
+  --clr-accent: #2f4858; }
