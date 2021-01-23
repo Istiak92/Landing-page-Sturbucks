@@ -21,13 +21,13 @@ p {
   line-height: 1;
 }
 .spacing > * + * {
-  margin-top: var(--spacer, 2em);
+  margin-top: var(--spacer, 3em);
 }
 .container {
   width: 85%;
   max-width: 65em;
   margin: 0 auto;
-  padding: 12em 0;
+  padding: 10em 0;
 }
 .split {
   display: flex;
@@ -62,7 +62,7 @@ section {
 }
 .initial-title {
   font-size: 4rem;
-  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+  font-size: clamp(3rem, calc(5vw + 1rem), 4rem);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -77,6 +77,9 @@ section {
 .hero {
   color: white;
   text-align: center;
+  span {
+    font-weight: 700;
+  }
 
   background: #222;
   @supports (background-blend-mode: multiply) {
@@ -89,7 +92,7 @@ section {
   }
 }
 .logo {
-  padding: 10px;
+  padding: 15px;
 }
 .featured {
   background: #eee;
@@ -147,8 +150,7 @@ section {
   text-align: center;
 
   &_title {
-    font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
-    text-transform: uppercase;
+    font-size: clamp(2rem, calc(5vw + 1rem), 4rem);
     line-height: 1;
     color: #fff;
     text-shadow: 0 0 0.2em rgba(#000, 0.2);
@@ -162,6 +164,7 @@ section {
     text-align: left;
     &_title {
       margin: 0;
+      word-break: break-word;
     }
     &_image {
       float: right;
