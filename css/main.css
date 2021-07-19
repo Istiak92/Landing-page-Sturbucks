@@ -158,10 +158,6 @@ section {
 .container {
   --clr-accent: #008951; }
 
-.coffee-one {
-  --clr-inner: #ffffffc4;
-  --clr-outer: #4ab66e; }
-
 .coffee-two {
   --clr-inner: #f3dcab;
   --clr-outer: #f8c726;
